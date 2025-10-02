@@ -22,7 +22,7 @@ public class Inverso {
         String numero =JOptionPane.showInputDialog("digite un numero:");
         int n = Integer.parseInt(numero);
         int resultado = numeroInverso(n, 0);
-        JOptionPane.showMessageDialog(null,n + " = " + resultado);
+        JOptionPane.showMessageDialog(null, n + " = " + resultado);
     }
 }
 
