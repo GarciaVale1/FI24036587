@@ -40,7 +40,7 @@ public class Reverts {
         File archivoEntrada = new File("entrada.txt");
         if (!archivoEntrada.exists()) {
             FileWriter creador = new FileWriter("entrada.txt");
-            creador.write("zil ef eviv"); // mensaje invertido
+            creador.write("zil ef eviv"); 
             creador.close();
             System.out.println("Se creó 'entrada.txt' con el mensaje invertido.");
         }
