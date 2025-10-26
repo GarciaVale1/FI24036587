@@ -16,7 +16,7 @@ public class TheQueue<Type> implements TheQueueInterface<Type> {
     }
 
     public Type dequeue() {
-         return _queue.pollFirst;
+         return _queue.peekFirst();
     }
 
     public Type getFront() {
@@ -32,7 +32,7 @@ public class TheQueue<Type> implements TheQueueInterface<Type> {
     }
 
     public String[] getCodons() {
-        int size = _queue.size();
+        var size = _queue.size();
         String[] codons = new String[size / 3];
         
         for (int i = 0; i < codons.length; i++) {
@@ -72,7 +72,9 @@ public class TheQueue<Type> implements TheQueueInterface<Type> {
         System.out.println("   ↳ getFront() → " + queue.getFront());
         System.out.println("   ↳ getSize() → " + queue.getSize());
         System.out.println("   ↳ isEmpty() → " + queue.isEmpty());
+
         System.out.println("\ngetCodons() → " + Arrays.toString(queue.getCodons()));
+        
         System.out.println("\nEnd {empty}");
         System.out.println(" ↳ print() → " + queue.print());
         System.out.println("   ↳ getFront() → " + queue.getFront());
