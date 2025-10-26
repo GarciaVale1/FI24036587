@@ -6,23 +6,33 @@ public class Numbers {
         return round((z + Math.sqrt(4 + Math.pow(z, 2))) / 2);
     }
 
-    public static double recursive(double z) {
-        return round(recursive(z, N) / recursive(z, N - 1));
-    }
-
-    public static double iterative(double z) {
-        return round(iterative(z, N) / iterative(z, N - 1));
-    }
-
     private static double recursive(double z, double n) {
-        return n == 0 || n == 1 ? z : recursive(z, n - 1) + recursive(z, n - 2);
-    }
+        if (n ==0) return 1.0;
+        if (n==1) return 1.0; 
+        return z * recursive(z, n - 1) + recursive(z, n - 2);
 
     private static double iterative(double z, double n) {
-        return 1.0;
+        if (n == 0)
+            return 1.0;
+        if (n == 1)
+            return 1.0;
+
+        double a = 1.0; // f(z, 0)
+        double b = 1.0; // f(z, 1)
+        double c = 0.0;
+
+        for (int i = 2; i <= n; i++) {
+            c = z * b + a; // f(z, i) = z * f(z, i-1) + f(z, i-2)
+            a = b;
+            b = c;
+        }
+        return c;
+
     }
 
-    private double round(double value) {
+    
+
+    private staticdouble round(double value) {
         var ROUND = 10000000000.0;
         return Math.round(value * ROUND) / ROUND;
     }
