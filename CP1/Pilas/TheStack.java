@@ -15,13 +15,13 @@ public class TheStack<Type> implements TheStackInterface<Type> {
     public Boolean push(Type item) {
         var available = _stack.size() < _capacity;
         if (available) {
-            push(item);
+            _stack.push(item);
         }
         return available;
     }
 
     public Type pop() {
-        return _stack.pop();
+        return _stack.isEmpty()? null : _stack.pop();
     }
 
     public Type peek() {
