@@ -16,7 +16,7 @@ public class TheQueue<Type> implements TheQueueInterface<Type> {
     }
 
     public Type dequeue() {
-         return _queue.peekFirst();
+         return _queue.pollFirst();
     }
 
     public Type getFront() {
@@ -74,7 +74,7 @@ public class TheQueue<Type> implements TheQueueInterface<Type> {
         System.out.println("   ↳ isEmpty() → " + queue.isEmpty());
 
         System.out.println("\ngetCodons() → " + Arrays.toString(queue.getCodons()));
-        
+
         System.out.println("\nEnd {empty}");
         System.out.println(" ↳ print() → " + queue.print());
         System.out.println("   ↳ getFront() → " + queue.getFront());
