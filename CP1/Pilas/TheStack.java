@@ -25,7 +25,7 @@ public class TheStack<Type> implements TheStackInterface<Type> {
     }
 
     public Type peek() {
-        return _stack.peek();
+        return _stack.isEmpty()? null : _stack.peek();
     }
 
     public boolean empty() {

@@ -6,6 +6,13 @@ public class Numbers {
         return round((z + Math.sqrt(4 + Math.pow(z, 2))) / 2);
     }
 
+    public static double recursive(double z) {
+        return round(recursive(z, N) / recursive(z, N - 1));
+    }
+
+    public static double iterative(double z) {
+        return round(iterative(z, N) / iterative(z, N - 1));
+    }
     private static double recursive(double z, double n) {
         if (n ==0) return 1.0;
         if (n==1) return 1.0; 
