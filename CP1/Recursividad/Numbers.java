@@ -26,12 +26,12 @@ public class Numbers {
         if (n == 1)
             return 1.0;
 
-        double a = 1.0; // f(z, 0)
-        double b = 1.0; // f(z, 1)
+        double a = 1.0; 
+        double b = 1.0; 
         double c = 0.0;
 
         for (int i = 2; i <= n; i++) {
-            c = z * b + a; // f(z, i) = z * f(z, i-1) + f(z, i-2)
+            c = z * b + a; 
             a = b;
             b = c;
         }
