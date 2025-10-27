@@ -1,3 +1,5 @@
+// chatgpt 
+
 public class Numbers {
 
     private static double N = 25;
