@@ -19,6 +19,7 @@ public class Numbers {
         if (n ==0) return 1.0;
         if (n==1) return 1.0; 
         return z * recursive(z, n - 1) + recursive(z, n - 2);
+    }
 
     private static double iterative(double z, double n) {
         if (n == 0)
@@ -41,7 +42,7 @@ public class Numbers {
 
     
 
-    private staticdouble round(double value) {
+    private static double round(double value) {
         var ROUND = 10000000000.0;
         return Math.round(value * ROUND) / ROUND;
     }
