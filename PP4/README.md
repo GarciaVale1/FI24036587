@@ -180,3 +180,7 @@ Repositorio [directorio con su número de carné]
     ├── BinTreeIntArray.java [archivo proveído]
     └── README.md [documentación]
 ```
+
+Valentina Garcia FI24036587
+VISUAL STUDIO
+CHATGPT 
