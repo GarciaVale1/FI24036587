@@ -10,7 +10,7 @@ public class CustomStack {
         var node = new StackNode(word);
 
         // Actualizar
-
+        node._head = _head;
         _head = node;
     }
 
@@ -18,6 +18,10 @@ public class CustomStack {
         String word = null;
 
         // Actualizar
+         if (_head != null) {
+            word = _head._value;
+            _head = _head._head;
+        }
 
         return word;
     }
@@ -26,6 +30,11 @@ public class CustomStack {
         var length = 0;
 
         // Actualizar
+         StackNode current = _head;
+        while (current != null) {
+            length++;
+            current = current._head;
+        }
 
         return length;
     }
