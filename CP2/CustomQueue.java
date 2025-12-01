@@ -10,12 +10,26 @@ public class CustomQueue {
         var node = new QueueNode(index);
 
         // Actualizar
+        if (_head == null) {
+            _head = node;
+        } else {
+            QueueNode current = _head;
+            while (current._head != null) {
+                current = current._head;
+            }
+            current._head = node;
+        }
     }
 
     public int dequeue() {
         var index = -1;
 
         // Actualizar
+         if (_head != null) {
+            index = _head._value;
+            _head = _head._head;
+        }
+
 
         return index;
     }
@@ -24,6 +38,11 @@ public class CustomQueue {
         var size = 0;
 
         // Actualizar
+         QueueNode current = _head;
+        while (current != null) {
+            size++;
+            current = current._head;
+        }
 
         return size;
     }
